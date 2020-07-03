@@ -1,5 +1,6 @@
 *,*::before,*::after{
 	box-sizing: border-box;
+	outline: none;
 }
 body{
 	margin: 0;
@@ -21,6 +22,10 @@ header{
 	width:100%;
 	background-color: #0e76a8;
 }
+.header-container{
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+}
 .profile-container{
 	width: 2em;
 	height: 2em;
@@ -33,23 +38,28 @@ header{
 }
 .search-box{
 	width:70%;
-	background-color: green;
-	
+	background-color: #e1e9ee;
 	display: flex;
 	align-items: center;
 }
 #search-icon{
-	width: 20%;
-	color: #FFF;
+	width: 10%;
+	color: darkgray;
 }
 #search-input{
 	width:80%;
 	height: 95%;
 	padding: 0;
+	background-color: #e1e9ee;
+	border:0; 
 }
 .message-icon{
 	width: 10%;
-	top:0;
+	display: flex;
+	align-items: center;
+}
+.message-icon span{
+	color: #FFF;
 }
 img{
 	max-width: 100%;
@@ -96,7 +106,7 @@ img{
 }
 a{
 	text-decoration: none;
-	color:#000;
+	color:#555555;
 }
 .likes-info{
 	box-shadow: 0 1px 0 0 darkgray;
@@ -106,4 +116,17 @@ a{
 .icons-container{
 	align-items: center;
 	padding-top: 0.2em;
+}
+.footer-content{
+	padding:0.5em;
+	position: sticky;
+	bottom: 0; 
+	background-color: #FFF;
+	box-shadow: 0 -0.5px 3px 0 #000;
+}
+.footer-icons{
+	align-items: center;
+}
+.likeButton{
+	transform: rotateY(180deg);
 }

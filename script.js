@@ -172,7 +172,8 @@ function posts_creator(){
 		icons_container.classList.add('icons-container','container','flex');
 		//Like
 		let likeButton=creator('span');
-		likeButton.classList.add('fa','fa-thumbs-up');
+		likeButton.classList.add('material-icons','likeButton');
+		likeButton.innerHTML='thumb_up';
 		
 		//Comment
 		let commentButton=creator('span');
