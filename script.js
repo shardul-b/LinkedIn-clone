@@ -39,6 +39,18 @@ let posts={
 		'reactions':'36',
 		'comments':'19 comments',
 	},
+	'shardul-birje':{
+		'people-update':'<b>Sahil</b> likes this',
+		'profile':'https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
+		'profile-name':'Shardul Birje',
+		'profile-description':'Founder and CEO ',
+		'time':'12d',
+		'description':'Just Completed learning JavaScript..It was an awesome experience',
+		'image':'https://images.unsplash.com/photo-1593559720888-d519a3b67747?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
+		'link':'none',
+		'reactions':'10',
+		'comments':'19 comments',
+	}
 };
 function posts_creator(){
 	let postsContainer=classes('post-container');
@@ -157,39 +169,58 @@ function posts_creator(){
 
 		//icons container
 		let icons_container=creator('div');
-		icons_container.classList.add('icons-container','container');
+		icons_container.classList.add('icons-container','container','flex');
 		//Like
 		let likeButton=creator('span');
 		likeButton.classList.add('fa','fa-thumbs-up');
-		let likeText=creator('span');
-		likeText.classList.add('like-text');
-		likeText.innerHTML='Like';
+		
 		//Comment
 		let commentButton=creator('span');
 		commentButton.classList.add('material-icons');
 		commentButton.innerHTML='comment';
-		let commentText=creator('span');
-		commentText.classList.add('comment-text');
-		commentText.innerHTML='Comment';
+		
 		//Share
 		let shareButton=creator('span');
 		shareButton.classList.add('fa','fa-share-alt');
-		let shareText=creator('span');
-		shareText.classList.add('share-text');
-		shareText.innerHTML='Share';
+		
 		//Send
 		let sendButton=creator('span');
 		sendButton.classList.add('material-icons');
 		sendButton.innerHTML='near_me';
-		let sendText=creator('span');
-		sendText.classList.add('send-text');
-		sendText.innerHTML='Send';
+		
 
 		icons_container.appendChild(likeButton);
 		icons_container.appendChild(commentButton);
 		icons_container.appendChild(shareButton);
 		icons_container.appendChild(sendButton);
 		post_box.appendChild(icons_container);
+
+		//Icon text container
+		let iconsText=creator('div');
+		iconsText.classList.add('icons-text-container','container','flex');
+
+		let likeText=creator('span');
+		likeText.classList.add('like-text');
+		likeText.innerHTML='Like';
+
+		let commentText=creator('span');
+		commentText.classList.add('comment-text');
+		commentText.innerHTML='Comment';
+
+		let shareText=creator('span');
+		shareText.classList.add('share-text');
+		shareText.innerHTML='Share';
+
+		let sendText=creator('span');
+		sendText.classList.add('send-text');
+		sendText.innerHTML='Send';
+
+		iconsText.appendChild(likeText);
+		iconsText.appendChild(commentText);
+		iconsText.appendChild(shareText);
+		iconsText.appendChild(sendText);
+		post_box.appendChild(iconsText);
+
 	}
 }
 
