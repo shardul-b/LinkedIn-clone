@@ -1,0 +1,90 @@
+*,*::before,*::after{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding:0;
+}
+.container{
+	width: 95%;
+	margin: 0 auto;
+	border:1px solid red;
+}
+.flexonly{
+	display: flex;
+}
+.flex{
+	display: flex;
+	justify-content: space-between;
+}
+header{
+	width:100%;
+	background-color: #0e76a8;
+
+}
+.profile-container{
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	align-self: flex-start;
+}
+.profile-img{
+	border-radius: 50%;
+	border:1px solid #FFF;
+}
+.search-box{
+	width:70%;
+	background-color: green;
+	
+	display: flex;
+	align-items: center;
+}
+#search-icon{
+	width: 20%;
+	color: #FFF;
+}
+#search-input{
+	width:80%;
+	height: 95%;
+	padding: 0;
+}
+.message-icon{
+	width: 10%;
+	top:0;
+}
+img{
+	max-width: 100%;
+}
+.message-icon-img{
+	background-color: #0e76a8;
+}
+.post-container{
+	width:100%;
+}
+.post-box{
+	margin-top: 1em;
+}
+.details{
+	width:90%;
+	margin-left:0.5em;
+}
+.details span{
+	display:block;
+}
+.poster-container{
+	width:3em;
+	height: 3em;
+}
+.poster-img{
+	border-radius: 50%;
+}
+.profile-details{
+	align-items: center;
+}
+.name{
+	font-weight: bold;
+}
+/*.post-box{
+	width:100%;
+
+}*/
