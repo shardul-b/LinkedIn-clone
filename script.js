@@ -21,10 +21,11 @@ let posts={
 		'profile-description':'4,259,248 followers',
 		'time':'Promoted',
 		'description':'Leverage your LinkedIn page to it\'s full potential.Boost engagement of a post with $50 in free LinkedIn ad credits' ,
-		'image':'',
-		'link':'none',
-		'reactions':36,
-		'comments':19,
+		'image':'https://images.unsplash.com/photo-1593559720888-d519a3b67747?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
+		'link-desc':'<b>B2B Advertising Promo | LinkedIn Marketing Solutions</b>',
+		'link':'business.linkedin.com',
+		'reactions':'18,266',
+		'comments':'527 comments',
 	},
 	'john-doe':{
 		'people-update':'<b>Alan Page</b> likes this',
@@ -33,10 +34,10 @@ let posts={
 		'profile-description':'Founder and CEO at John and co.',
 		'time':'3d',
 		'description':'Just Completed learning JavaScript..It was an awesome experience',
-		'image':'',
+		'image':'https://images.unsplash.com/photo-1593559720888-d519a3b67747?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
 		'link':'none',
-		'reactions':36,
-		'comments':19,
+		'reactions':'36',
+		'comments':'19 comments',
 	},
 };
 function posts_creator(){
@@ -100,6 +101,95 @@ function posts_creator(){
 
 		descriptionBox.appendChild(description);
 		post_box.appendChild(descriptionBox);
+
+		//post image section
+		let postImage=creator('div');
+		postImage.classList.add('post-image-container');
+		//image
+		let postimg=creator('img');
+		postimg.classList.add('post-img');
+		postimg.setAttribute('src',posts[i]['image']);
+
+		postImage.appendChild(postimg);
+		post_box.appendChild(postImage);
+
+		//link if any
+		if(posts[i]['link']!=='none'){
+			//Link box
+			let linkBox=creator('div');
+			linkBox.classList.add('linkBox');
+			//container
+			let container=creator('div');
+			container.classList.add('container');
+			//Link Description
+			let linkdesc=creator('span');
+			linkdesc.classList.add('link-desc');
+			linkdesc.innerHTML=posts[i]['link-desc'];
+			//link
+			let link=creator('a');
+			link.setAttribute('href',posts[i]['link']);
+			link.innerHTML=posts[i]['link'];
+
+			container.appendChild(linkdesc);
+			container.appendChild(link);
+			linkBox.appendChild(container);
+			post_box.appendChild(linkBox);
+		}
+		//likes
+		let likesinfo=creator('div');
+		likesinfo.classList.add('likes-info','container','flex');
+		//reactions
+		let reactionsInfo=creator('div');
+		reactionsInfo.classList.add('reactions-info');
+		let reactions_icons=creator('span');
+		let reactions_value=creator('span');
+		reactions_value.innerHTML=posts[i]['reactions'];
+		//comments span
+		let commentsInfo=creator('span');
+		commentsInfo.innerHTML=posts[i]['comments'];
+		commentsInfo.classList.add('commentsInfo');
+
+		reactionsInfo.appendChild(reactions_icons);
+		reactionsInfo.appendChild(reactions_value);
+		likesinfo.appendChild(reactionsInfo);
+		likesinfo.appendChild(commentsInfo);
+		post_box.appendChild(likesinfo);
+
+		//icons container
+		let icons_container=creator('div');
+		icons_container.classList.add('icons-container','container');
+		//Like
+		let likeButton=creator('span');
+		likeButton.classList.add('fa','fa-thumbs-up');
+		let likeText=creator('span');
+		likeText.classList.add('like-text');
+		likeText.innerHTML='Like';
+		//Comment
+		let commentButton=creator('span');
+		commentButton.classList.add('material-icons');
+		commentButton.innerHTML='comment';
+		let commentText=creator('span');
+		commentText.classList.add('comment-text');
+		commentText.innerHTML='Comment';
+		//Share
+		let shareButton=creator('span');
+		shareButton.classList.add('fa','fa-share-alt');
+		let shareText=creator('span');
+		shareText.classList.add('share-text');
+		shareText.innerHTML='Share';
+		//Send
+		let sendButton=creator('span');
+		sendButton.classList.add('material-icons');
+		sendButton.innerHTML='near_me';
+		let sendText=creator('span');
+		sendText.classList.add('send-text');
+		sendText.innerHTML='Send';
+
+		icons_container.appendChild(likeButton);
+		icons_container.appendChild(commentButton);
+		icons_container.appendChild(shareButton);
+		icons_container.appendChild(sendButton);
+		post_box.appendChild(icons_container);
 	}
 }
 
