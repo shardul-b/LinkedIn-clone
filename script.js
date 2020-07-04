@@ -16,7 +16,7 @@ const creator=(val)=>{
 let posts={
 	'linkedin-marketing':{
 		'people-update':'<b>Kaushik Mishra</b>, <b>Ayush Jain</b> and 272 other connections follow <b>LinkedIn Marketing Solutions</b>',
-		'profile':'https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
+		'profile':'assests/linkedin.png',
 		'profile-name':'LinkedIn Marketing Solutions',
 		'profile-description':'4,259,248 followers',
 		'time':'Promoted',
@@ -28,28 +28,28 @@ let posts={
 		'comments':'527 comments',
 	},
 	'john-doe':{
-		'people-update':'<b>Alan Page</b> likes this',
-		'profile':'https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
+		'people-update':'<b>Alan Page</b> Appreciates this',
+		'profile':'https://images.unsplash.com/photo-1571929232190-30f765788262?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
 		'profile-name':'John Doe',
 		'profile-description':'Founder and CEO at John and co.',
 		'time':'3d',
 		'description':'Just Completed learning JavaScript..It was an awesome experience',
-		'image':'https://images.unsplash.com/photo-1593559720888-d519a3b67747?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
+		'image':'assests/js.png',
 		'link':'none',
 		'reactions':'36',
 		'comments':'19 comments',
 	},
-	'shardul-birje':{
-		'people-update':'<b>Sahil</b> likes this',
-		'profile':'https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
-		'profile-name':'Shardul Birje',
-		'profile-description':'Founder and CEO ',
-		'time':'12d',
-		'description':'Just Completed learning JavaScript..It was an awesome experience',
-		'image':'https://images.unsplash.com/photo-1593559720888-d519a3b67747?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
+	'robin-sharma':{
+		'people-update':'<b>Rahul Singh</b> and 299 others like this',
+		'profile':'assests/robin.jpg',
+		'profile-name':'Robin Sharma',
+		'profile-description':'Founder and CEO',
+		'time':'1h',
+		'description':'<b>Change</b>',
+		'image':'assests/robinpost.png',
 		'link':'none',
-		'reactions':'10',
-		'comments':'19 comments',
+		'reactions':'50,000',
+		'comments':'2000 comments',
 	}
 };
 function posts_creator(){
@@ -63,12 +63,17 @@ function posts_creator(){
 
 		//connections activity div
 		let activity=creator('div');
-		activity.classList.add('activity','container');
+		activity.classList.add('activity');
+		//container
+		let container=creator('div');
+		container.classList.add('container','activity-container');
 		let activity_descriptions=creator('span');
 		let arrow=creator('span');
 		activity_descriptions.innerHTML=posts[i]['people-update'];
-		activity.appendChild(activity_descriptions);
-		activity.appendChild(arrow);
+		
+		container.appendChild(activity_descriptions);
+		container.appendChild(arrow);
+		activity.appendChild(container);
 		post_box.appendChild(activity);
 
 		//profile details
