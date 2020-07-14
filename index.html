@@ -10,11 +10,105 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<!-- SideBar -->
+	<div class="menu hide">
+		<!-- Profile Section -->
+        <div class="profile-details">
+        	<div class="container">
+        	<!-- Image and Theme-->
+        		<div class="profile-image-mode flex">
+		        	<div class="profile-container">
+		        		<a href="#"><img src="https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" class="profile-img"></a>
+		        	</div>
+		        	<button class="moon"><i class="fa fa-moon"></i></button>
+	        	</div>
+	        	<!-- Phone and arrows -->
+	        	<div class="profile-details-info flex">
+	        		<div class="name-phone">
+	        			<span class="name">Alex B</span>
+	        			<span class="phone">+91 1234567891</span>
+	        		</div>
+	        		
+	        		<button class="arrow down-arrow"><span class="material-icons">keyboard_arrow_down</span></button>
+	        		<button class="arrow up-arrow hide"><span class="material-icons">keyboard_arrow_up</span></button>
+	        	
+	        	</div>
+	        </div>
+        </div>
+        <!-- Sub menu -->
+        <div class="sub-menu hide">
+        	<div class="container">
+        		<!-- Profile section -->
+        		<div class="sub-menu-profile flexonly">
+	        		<div class="sub-profile-container">
+	        			<img src="https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" class="sub-profile-img">
+	        		</div>
+	        		<span class="sub-profile-name">Alex B</span>
+	        	</div>
+        		<div class="sub-menu-object menu-object">
+        			<span class="plus">+</span>
+        			<span class="menu-object-text">Add Account</span>
+        		</div>
+        	</div>
+        </div>
+        <!-- Options -->
+        <div class="menu-options">
+        	<div class="container">
+	    		<div class="menu-object">
+	    			<span class="material-icons">people</span>
+	    			<a href="#" class="menu-object-text">New Group</a>
+	    		</div>
+				<div class="menu-object">
+	    			<span class="material-icons">lock</span>
+	    			<a href="#" class="menu-object-text">New Secret Chat</a>
+	    		</div>
+	    		<div class="menu-object">
+	    			<img src="assests/mega.png" class='mega'>
+	    			<a href="#" class="menu-object-text">New Channel</a>
+	    		</div>
+	    		<div class="menu-object">
+	    			<span class="material-icons">person</span>
+	    			<a href="#" class="menu-object-text">Contacts</a>
+	    		</div>   
+	    		<div class="menu-object">
+	    			<span class="material-icons">phone</span>
+	    			<a href="#" class="menu-object-text">Calls</a>
+	    		</div> 
+	    		<div class="menu-object">
+	    			<span class="material-icons">bookmark_border</span>
+	    			<a href="#" class="menu-object-text">Saved Messages</a>
+	    		</div> 
+	    		<div class="menu-object">
+	    			<span class="material-icons">settings</span>
+	    			<a href="#" class="menu-object-text">Settings</a>
+	    		</div> 
+	    	</div>
+    	</div>
+    	<!-- Extra options -->
+    	<div class="menu-extra-options">
+    		<div class="container">
+    			<div class="menu-object">
+	    			<span class="material-icons">person_add</span>
+	    			<a href="#" class="menu-object-text">Invite Friends</a>
+	    		</div> 
+	    		<div class="menu-object">
+	    			<span class="material-icons">help_outline</span>
+	    			<a href="#" class="menu-object-text">Telegram FAQ</a>
+	    		</div> 
+	    	</div>
+    	</div>
+    </div>
 	<header>
 		<div class="container flex header-container">
+			<!-- Removed as part of task 2 
 			<div class="profile-container">
 				<a href="#"><img src="https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9" class="profile-img"></a>
-			</div>
+			</div> 
+			-->
+			<button class="nav-toggle">
+                <span class="hamburger"></span>
+            </button>
+            
 			<div class="search-box">
 				<span id='search-icon' class="material-icons">search</span>
 				<input type="text" id='search-input' placeholder="Search">
@@ -67,6 +161,7 @@
 			</div>
 		</div>
 	</header>
+	
 	<div class="post-container">
 		
 	</div>

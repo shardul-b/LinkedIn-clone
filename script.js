@@ -254,5 +254,27 @@ function posts_creator(){
 
 	}
 }
+//displays the side bar
+classes('nav-toggle')[0].addEventListener('click',()=>{
+	classes('menu')[0].classList.toggle('visible');
+});
+//shows/hides extra content in the sidebar
+classes('down-arrow')[0].addEventListener('click',()=>{
+	classes('up-arrow')[0].classList.toggle('visible');
+	classes('down-arrow')[0].classList.toggle('hide');
+	classes('sub-menu')[0].classList.toggle('hide');
+});
+classes('up-arrow')[0].addEventListener('click',()=>{
+	classes('up-arrow')[0].classList.toggle('visible');
+	classes('down-arrow')[0].classList.toggle('hide');
+	classes('sub-menu')[0].classList.toggle('hide');
+});
 
-
+//For hiding the Sidebar when clicked outside 
+document.addEventListener("click",(event)=>{
+    if(classes('menu')[0].classList.contains('visible')){
+    	if(!event.target.closest(".menu")  && !event.target.closest('.nav-toggle')){
+    		classes('menu')[0].classList.toggle('visible');
+    	}
+    }
+});
