@@ -73,6 +73,10 @@ header{
 	border-radius: 50%;
 	align-self:center;
 }
+.desk{
+	width:2em;
+	height:2em;
+}
 .profile-img{
 	border-radius: 50%;
 	border:1px solid #FFF;
@@ -93,7 +97,7 @@ header{
 	padding: 0;
 	background-color: #0e76a8;
 }
-.profile-details{
+.profile-details-menu{
 	margin:0;
 	width:100%;
 	height:20%;
@@ -127,7 +131,7 @@ header{
 	padding-top: 1.5em;
 	border-top: 1px solid #DCDCDC;
 	background: #FFF;
-	height: 23.5%;
+	height: 24.7%;
 }
 .search-box{
 	width:70%;
@@ -241,11 +245,11 @@ img{
 }
 .post-box{
 	margin-top: 1em;
-	box-shadow: 0 0 0.1px 1px gray;
+	border:1px solid #D3D3D3;
 }
 .activity{
 	width: 100%;
-	border-bottom: 0.1px solid gray;
+	border-bottom: 0.1px solid #DCDCDC;
 }
 .activity-container{
 	padding: 0.5em;
